@@ -1,0 +1,73 @@
+.hero-banner {
+    height: calc(100vh - 60px);
+    position: relative;
+    // background-image: linear-gradient(25deg, #d64c7f, #ee4758 50%);
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    .content {
+        display: flex;
+        justify-content: flex-end;
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        .banner-img {
+            position: relative;
+            z-index: 9;
+            margin-top: 50px;
+            max-width: 450px;
+        }
+        .text-content {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            color: white;
+            h1 {
+                font-size: 11vw;
+                color: white;
+                line-height: 1;
+            }
+            h2 {
+                font-size: 60px;
+                z-index: 1;
+            }
+            p {
+                max-width: 600px;
+                margin-top: 10px;
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            .banner-cta {
+                margin-top: 25px;
+                width: fit-content;
+                border: 2px solid white;
+                padding: 10px 20px;
+                transition: all ease 0.3s;
+                cursor: pointer;
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.custom-shape-divider-bottom-1670881058 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1670881058 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 79px;
+}
+
+.custom-shape-divider-bottom-1670881058 .shape-fill {
+    fill: #ffffff;
+}

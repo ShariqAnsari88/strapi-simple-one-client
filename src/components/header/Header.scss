@@ -1,0 +1,34 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 0 20px;
+    position: relative;
+    .left {
+        list-style-type: none;
+        display: flex;
+        gap: 25px;
+        li {
+            cursor: pointer;
+        }
+    }
+    .center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        svg {
+            cursor: pointer;
+        }
+    }
+}
