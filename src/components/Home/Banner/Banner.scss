@@ -1,5 +1,6 @@
 .hero-banner {
-    height: calc(100vh - 60px);
+    height: 100vh;
+    // height: calc(100vh - 60px);
     position: relative;
     // background-image: linear-gradient(25deg, #d64c7f, #ee4758 50%);
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
@@ -12,13 +13,13 @@
         .banner-img {
             position: relative;
             z-index: 9;
-            margin-top: 50px;
+            margin-top: 110px;
             max-width: 67vh;
         }
         .text-content {
             position: absolute;
             left: 0;
-            top: 150px;
+            top: 200px;
             color: white;
             h1 {
                 font-size: 11vw;

@@ -1,0 +1,15 @@
+.products-container {
+    margin: 75px 0;
+    .sec-heading {
+        margin-bottom: 50px;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+    .products {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
