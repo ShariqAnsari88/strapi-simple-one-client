@@ -1,0 +1,33 @@
+.main-content {
+    margin: 75px 0;
+    .layout {
+        .single-product-page {
+            display: flex;
+            .left {
+                width: 600px;
+                height: 600px;
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+            .right {
+                display: flex;
+                flex-direction: column;
+                padding: 0 35px;
+                .name {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
+                .price {
+                    font-size: 24px;
+                    line-height: 32px;
+                    margin-bottom: 20px;
+                }
+                .desc {
+                    line-height: 24px;
+                    margin-bottom: 20px;
+                    color: #6b6b6b;
+                }
+            }
+        }
+    }
+}

@@ -1,9 +1,11 @@
+@import "../../../css-config/mixins.scss";
 .hero-banner {
-    height: 100vh;
-    // height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
     position: relative;
-    // background-image: linear-gradient(25deg, #d64c7f, #ee4758 50%);
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    @include xxl {
+        height: 80vh;
+    }
     .content {
         display: flex;
         justify-content: flex-end;
@@ -13,18 +15,27 @@
         .banner-img {
             position: relative;
             z-index: 9;
-            margin-top: 110px;
+            margin-top: 50px;
             max-width: 67vh;
+            @include xxl {
+                max-width: 55vh;
+            }
         }
         .text-content {
             position: absolute;
             left: 0;
-            top: 200px;
+            top: 140px;
             color: white;
             h1 {
                 font-size: 11vw;
                 color: white;
                 line-height: 1;
+                @include xl {
+                    font-size: 11vw;
+                }
+                @include xxl {
+                    font-size: 7vw;
+                }
             }
             h2 {
                 font-size: 60px;
@@ -52,7 +63,8 @@
         }
     }
 }
-.custom-shape-divider-bottom-1670881058 {
+
+.custom-shape-divider-bottom-1670962865 {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -62,13 +74,13 @@
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1670881058 svg {
+.custom-shape-divider-bottom-1670962865 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 79px;
+    height: 117px;
 }
 
-.custom-shape-divider-bottom-1670881058 .shape-fill {
+.custom-shape-divider-bottom-1670962865 .shape-fill {
     fill: #ffffff;
 }

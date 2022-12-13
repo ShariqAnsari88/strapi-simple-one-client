@@ -7,13 +7,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    position: absolute;
-    top: 0;
     z-index: 1;
-    color: white;
-    border-bottom: 1px solid;
-    border-color: rgba(255, 255, 255, 0.1);
+    color: black;
     z-index: 99;
+    background-color: white;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
     .left {
         list-style-type: none;
         display: flex;
@@ -28,6 +27,7 @@
         transform: translateX(-50%);
         font-size: 28px;
         font-weight: 700;
+        cursor: pointer;
     }
     .right {
         display: flex;
@@ -38,10 +38,18 @@
         }
     }
     &.sticky-header {
-        color: black;
-        background-color: white;
-        border-color: rgba(0, 0, 0, 0.1);
         position: sticky;
         top: 0;
+        transform: translateY(-60px);
+        animation: StickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-60px);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

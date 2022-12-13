@@ -1,12 +1,15 @@
 .product-card {
     cursor: pointer;
-    width: 275px;
+    width: calc(25% - 15px);
+    margin-bottom: 20px;
     .thumbnail {
-        width: 275px;
-        height: 275px;
+        width: 100%;
+        height: 350px;
         background-color: rgba(0, 0, 0, 0.05);
         margin-bottom: 10px;
         padding: 25px;
+        display: flex;
+        align-items: center;
         img {
             transition: all ease 0.3s;
             display: block;
