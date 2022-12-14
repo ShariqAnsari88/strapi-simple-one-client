@@ -1,0 +1,92 @@
+.search-modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: white;
+    .form-field {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        input {
+            width: 100%;
+            max-width: 1200px;
+            height: 80px;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 600;
+            color: #212121;
+            outline: none;
+            border: none;
+            &::placeholder {
+                color: #212121;
+            }
+        }
+        .close-btn {
+            position: absolute;
+            font-size: 50px;
+            right: 40px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+    }
+    .search-result-content {
+        max-width: 800px;
+        margin: 0 auto;
+        .start-msg {
+            text-align: center;
+            margin-top: 20px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .search-results {
+            height: calc(100vh - 160px);
+            overflow: auto;
+            margin: 20px 0;
+            .search-result-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 20px;
+                cursor: pointer;
+                .image-container {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    width: 60px;
+                    height: 60px;
+                    flex-shrink: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .prod-details {
+                    overflow: hidden;
+                    .name {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 16px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        display: block;
+                    }
+                    .desc {
+                        font-size: 14px;
+                        line-height: 1;
+                        display: block;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        color: rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}

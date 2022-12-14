@@ -6,9 +6,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 40px;
     z-index: 1;
-    color: black;
+    color: #212121;
     z-index: 99;
     background-color: white;
     border-bottom: 1px solid;
@@ -18,6 +18,9 @@
         display: flex;
         gap: 25px;
         li {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
             cursor: pointer;
         }
     }
@@ -38,6 +41,8 @@
         }
     }
     &.sticky-header {
+        background-color: #212121;
+        color: white;
         position: sticky;
         top: 0;
         transform: translateY(-60px);

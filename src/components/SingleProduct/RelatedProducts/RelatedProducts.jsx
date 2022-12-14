@@ -9,7 +9,7 @@ const RelatedProducts = ({ categoryId, productId }) => {
 
     return (
         <div className="related-products">
-            <Products innerPage={true} products={data} />
+            <Products headingText="Related Products" products={data} />
         </div>
     );
 };
