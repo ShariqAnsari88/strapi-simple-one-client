@@ -28,18 +28,23 @@ const Header = () => {
             <header
                 className={`main-header ${scrolled ? "sticky-header" : ""}`}
             >
-                <ul className="left">
-                    <li onClick={() => navigate("/")}>Home</li>
-                    <li onClick={() => navigate("/about")}>About</li>
-                    <li>Categories</li>
-                </ul>
-                <div className="center" onClick={() => navigate("/")}>
-                    JSDEVSTORE.
-                </div>
-                <div className="right">
-                    <TbSearch size={20} onClick={() => setSearchModal(true)} />
-                    <AiOutlineHeart size={20} />
-                    <CgShoppingCart size={20} />
+                <div className="header-content">
+                    <ul className="left">
+                        <li onClick={() => navigate("/")}>Home</li>
+                        <li onClick={() => navigate("/about")}>About</li>
+                        <li>Categories</li>
+                    </ul>
+                    <div className="center" onClick={() => navigate("/")}>
+                        JSDEVSTORE.
+                    </div>
+                    <div className="right">
+                        <TbSearch
+                            size={24}
+                            onClick={() => setSearchModal(true)}
+                        />
+                        <AiOutlineHeart size={24} />
+                        <CgShoppingCart size={24} />
+                    </div>
                 </div>
             </header>
             {searchModal && <Search setSearchModal={setSearchModal} />}

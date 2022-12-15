@@ -1,14 +1,13 @@
 @import "../../../css-config/mixins.scss";
 .hero-banner {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 80px);
     position: relative;
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
-    @include xxl {
-        height: 80vh;
-    }
     .content {
+        height: 100%;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         max-width: 1200px;
         margin: 0 auto;
         position: relative;
@@ -16,71 +15,62 @@
             position: relative;
             z-index: 9;
             margin-top: 50px;
-            max-width: 67vh;
+            width: 500px;
+            margin-right: 60px;
             @include xxl {
-                max-width: 55vh;
+                width: 600px;
+                margin-right: 0;
+                margin-top: 0;
             }
         }
         .text-content {
             position: absolute;
-            left: 0;
-            top: 140px;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
             color: white;
-            h1 {
-                font-size: 11vw;
-                color: white;
-                line-height: 1;
-                @include xl {
-                    font-size: 11vw;
-                }
-                @include xxl {
-                    font-size: 7vw;
-                }
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include xxl {
+                left: 0;
             }
-            h2 {
-                font-size: 60px;
-                z-index: 1;
+            h1 {
+                font-size: 180px;
+                font-weight: 700;
+                line-height: 1;
+                color: white;
+                margin-bottom: 20px;
             }
             p {
-                max-width: 600px;
-                margin-top: 10px;
+                max-width: 500px;
                 font-size: 18px;
-                line-height: 26px;
+                line-height: 24px;
+                margin-bottom: 40px;
             }
-
-            .banner-cta {
-                margin-top: 25px;
-                width: fit-content;
-                border: 2px solid white;
-                padding: 10px 20px;
-                transition: all ease 0.3s;
-                cursor: pointer;
-                &:hover {
-                    background-color: white;
-                    color: black;
+            .ctas {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                .banner-cta {
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    font-weight: 500;
+                    width: fit-content;
+                    border: 2px solid white;
+                    padding: 10px 20px;
+                    transition: all ease 0.3s;
+                    cursor: pointer;
+                    &.v2 {
+                        background-color: white;
+                        color: black;
+                    }
+                    &:hover {
+                        opacity: 0.6;
+                    }
                 }
             }
         }
     }
-}
-
-.custom-shape-divider-bottom-1670962865 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1670962865 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 117px;
-}
-
-.custom-shape-divider-bottom-1670962865 .shape-fill {
-    fill: #ffffff;
 }
