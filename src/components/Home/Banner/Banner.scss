@@ -1,22 +1,35 @@
 @import "../../../css-config/mixins.scss";
 .hero-banner {
-    height: calc(100vh - 80px);
+    padding: 40px 0;
     position: relative;
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    @include md {
+        height: calc(100vh - 80px);
+    }
     .content {
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        max-width: 1200px;
+        flex-direction: column-reverse;
+        max-width: calc(100% - 20px);
         margin: 0 auto;
         position: relative;
+        @include md {
+            flex-direction: row;
+            max-width: 1200px;
+        }
         .banner-img {
             position: relative;
             z-index: 9;
-            margin-top: 50px;
-            width: 500px;
-            margin-right: 60px;
+            width: 200px;
+            margin-bottom: 20px;
+            @include md {
+                width: 500px;
+                margin-right: 60px;
+                margin-top: 50px;
+                margin-bottom: 0;
+            }
             @include xxl {
                 width: 600px;
                 margin-right: 0;
@@ -24,30 +37,41 @@
             }
         }
         .text-content {
-            position: absolute;
-            left: 50px;
-            top: 50%;
-            transform: translateY(-50%);
             color: white;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            @include md {
+                position: absolute;
+                left: 50px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
             @include xxl {
                 left: 0;
             }
             h1 {
-                font-size: 180px;
+                font-size: 80px;
                 font-weight: 700;
                 line-height: 1;
                 color: white;
                 margin-bottom: 20px;
+                @include md {
+                    font-size: 180px;
+                }
             }
             p {
-                max-width: 500px;
-                font-size: 18px;
-                line-height: 24px;
-                margin-bottom: 40px;
+                max-width: 300px;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+                @include md {
+                    max-width: 500px;
+                    font-size: 18px;
+                    line-height: 24px;
+                    margin-bottom: 40px;
+                }
             }
             .ctas {
                 display: flex;

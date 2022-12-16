@@ -53,11 +53,12 @@
     .right {
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
         @include md {
             gap: 25px;
         }
         svg {
+            font-size: 20px;
             cursor: pointer;
             @include md {
                 font-size: 24px;

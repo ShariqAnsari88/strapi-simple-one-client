@@ -1,3 +1,4 @@
+@import "../../../css-config/mixins.scss";
 .newsletter-section {
     width: 100%;
     height: 400px;
@@ -26,28 +27,36 @@
         }
         .big-text {
             margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 22px;
+            line-height: 30px;
             font-weight: 500;
             text-transform: uppercase;
+            padding: 0 30px;
+            @include md {
+                font-size: 28px;
+            }
         }
         .form {
             display: flex;
             gap: 5px;
             margin-bottom: 10px;
             input {
-                width: 300px;
+                width: 200px;
                 height: 40px;
                 border-radius: 0;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 padding: 0 12px;
                 font-size: 16px;
                 outline: none;
+                @include md {
+                    width: 300px;
+                }
             }
             button {
                 outline: 0;
                 border: 0;
                 height: 40px;
-                width: 120px;
+                width: 100px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -56,6 +65,9 @@
                 color: white;
                 background: #8e2de2;
                 border-bottom: 3px solid #6516aa;
+                @include md {
+                    width: 120px;
+                }
             }
         }
         .social-icons {
@@ -64,12 +76,12 @@
             .icon {
                 width: 30px;
                 height: 30px;
-                border: 1px solid rgba(0, 0, 0, 0.2);
+                background: rgba(0, 0, 0, 0.8);
                 border-radius: 50%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                color: rgba(0, 0, 0, 0.5);
+                color: white;
             }
         }
     }

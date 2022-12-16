@@ -1,13 +1,25 @@
+@import "../../css-config/mixins.scss";
 .footer {
     width: 100%;
     .footer-content {
-        padding: 50px 0;
+        padding: 50px 20px;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
-        justify-content: space-between;
+        flex-flow: wrap;
+        gap: 20px;
+        @include md {
+            justify-content: space-between;
+            padding: 50px 0;
+        }
         .col {
             max-width: 300px;
+            &:nth-child(3) {
+                width: 150px;
+                @include md {
+                    width: auto;
+                }
+            }
             .title {
                 margin-bottom: 20px;
                 font-size: 20px;
@@ -39,12 +51,21 @@
     .bottom-bar {
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         .bottom-bar-content {
-            height: 60px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            @include md {
+                padding: 0;
+                height: 60px;
+                max-width: 1200px;
+                margin: 0 auto;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
             .text {
                 font-size: 12px;
                 color: rgba(0, 0, 0, 0.5);

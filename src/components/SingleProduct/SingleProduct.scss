@@ -1,21 +1,49 @@
-.main-content {
-    margin: 75px 0;
+@import "../../css-config/mixins.scss";
+.single-product-main-content {
+    margin: 20px 0;
+    @include md {
+        margin: 75px 0;
+    }
     .layout {
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+        @include md {
+            max-width: 1200px;
+        }
         .single-product-page {
             display: flex;
+            flex-direction: column;
+            @include md {
+                flex-direction: row;
+            }
             .left {
-                width: 600px;
-                height: 600px;
+                width: 100%;
                 background-color: rgba(0, 0, 0, 0.05);
+                flex-shrink: 0;
+                @include md {
+                    width: 600px;
+                    height: 600px;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
             }
             .right {
                 display: flex;
                 flex-direction: column;
-                padding: 0 35px;
+                padding-top: 20px;
+                @include md {
+                    padding: 0 35px;
+                }
                 .name {
-                    font-size: 24px;
-                    line-height: 32px;
+                    font-size: 20px;
+                    line-height: 28px;
                     margin-bottom: 20px;
+                    @include md {
+                        font-size: 24px;
+                        line-height: 32px;
+                    }
                 }
                 .price {
                     font-size: 24px;
@@ -23,14 +51,22 @@
                     margin-bottom: 20px;
                 }
                 .desc {
-                    line-height: 24px;
+                    font-size: 14px;
+                    line-height: 20px;
                     margin-bottom: 20px;
                     color: #6b6b6b;
+                    @include md {
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 20px;
+                    }
                 }
 
                 .cart-buttons {
                     display: flex;
-                    margin-top: 30px;
+                    @include md {
+                        margin-top: 30px;
+                    }
                     .quantity-buttons {
                         width: fit-content;
                         display: flex;
@@ -69,6 +105,10 @@
                         color: white;
                         background: #8e2de2;
                         border-bottom: 3px solid #6516aa;
+                        flex-grow: 1;
+                        @include md {
+                            flex-grow: unset;
+                        }
                         svg {
                             margin-right: 10px;
                         }
@@ -87,7 +127,9 @@
                         font-size: 18px;
                         font-weight: 500;
                         display: block;
-                        margin-bottom: 20px;
+                        &:nth-child(1) {
+                            margin-bottom: 20px;
+                        }
                         span {
                             font-size: 16px;
                             font-weight: 400;

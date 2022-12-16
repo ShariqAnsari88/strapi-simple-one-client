@@ -33,7 +33,7 @@ const SingleProduct = () => {
     const product = data?.data?.[0]?.attributes;
 
     return (
-        <div className="main-content">
+        <div className="single-product-main-content">
             <div className="layout">
                 <div className="single-product-page">
                     <div className="left">
