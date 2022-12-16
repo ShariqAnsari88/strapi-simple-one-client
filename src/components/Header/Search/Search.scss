@@ -1,3 +1,4 @@
+@import "../../../css-config/mixins.scss";
 .search-modal {
     position: fixed;
     width: 100%;
@@ -6,53 +7,74 @@
     top: 0;
     left: 0;
     background-color: white;
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
     .form-field {
         width: 100%;
         display: flex;
         justify-content: center;
-        padding: 20px 0;
+        padding: 10px 50px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         position: relative;
+        @include md {
+            padding: 20px 0;
+        }
         input {
             width: 100%;
             max-width: 1200px;
-            height: 80px;
+            height: 50px;
             text-align: center;
-            font-size: 48px;
+            font-size: 20px;
             font-weight: 600;
             color: #212121;
             outline: none;
             border: none;
+            text-transform: uppercase;
+            @include md {
+                height: 80px;
+                font-size: 48px;
+            }
             &::placeholder {
                 color: #212121;
             }
         }
         .close-btn {
             position: absolute;
-            font-size: 50px;
-            right: 40px;
+            font-size: 25px;
+            right: 20px;
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+            @include md {
+                right: 40px;
+                font-size: 50px;
+            }
         }
     }
     .search-result-content {
-        max-width: 800px;
+        max-width: calc(100% - 20px);
         margin: 0 auto;
+        @include md {
+            max-width: 800px;
+        }
         .start-msg {
             text-align: center;
             margin-top: 20px;
             color: rgba(0, 0, 0, 0.5);
         }
         .search-results {
-            height: calc(100vh - 160px);
+            height: calc(100vh - 110px);
             overflow: auto;
             margin: 20px 0;
+            @include md {
+                height: calc(100vh - 160px);
+            }
             .search-result-item {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                margin-bottom: 20px;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                 cursor: pointer;
                 .image-container {
                     background-color: rgba(0, 0, 0, 0.05);
@@ -88,5 +110,14 @@
                 }
             }
         }
+    }
+}
+
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }

@@ -42,16 +42,13 @@ const Header = () => {
                         JSDEVSTORE.
                     </div>
                     <div className="right">
-                        <TbSearch
-                            size={24}
-                            onClick={() => setSearchModal(true)}
-                        />
-                        <AiOutlineHeart size={24} />
+                        <TbSearch onClick={() => setSearchModal(true)} />
+                        <AiOutlineHeart />
                         <span
                             className="cart-icon"
                             onClick={() => setShowCart(true)}
                         >
-                            <CgShoppingCart size={24} />
+                            <CgShoppingCart />
                             {!!cartCount && <span>{cartCount}</span>}
                         </span>
                     </div>

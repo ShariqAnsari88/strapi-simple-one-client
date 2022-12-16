@@ -2,27 +2,33 @@
 
 .main-header {
     width: 100%;
-    padding: 0 40px;
-    z-index: 1;
+    padding: 0 20px;
     z-index: 99;
-    // background-color: white;
-    // color: #212121;
     background-color: #212121;
     color: white;
     border-bottom: 1px solid;
     border-color: rgba(0, 0, 0, 0.1);
+    @include md {
+        padding: 0 40px;
+    }
     .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 80px;
+        height: 50px;
         max-width: 1200px;
         margin: 0 auto;
+        @include md {
+            height: 80px;
+        }
     }
     .left {
         list-style-type: none;
-        display: flex;
+        display: none;
         gap: 25px;
+        @include md {
+            display: flex;
+        }
         li {
             font-size: 14px;
             font-weight: 600;
@@ -34,19 +40,28 @@
         }
     }
     .center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 34px;
+        font-size: 22px;
         font-weight: 700;
         cursor: pointer;
+        @include md {
+            font-size: 34px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     .right {
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
+        @include md {
+            gap: 25px;
+        }
         svg {
             cursor: pointer;
+            @include md {
+                font-size: 24px;
+            }
             &:hover {
                 opacity: 0.6;
             }
